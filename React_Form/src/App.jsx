@@ -49,6 +49,7 @@ function App() {
           <input
             {...register('email', {
               required: 'Email is required',
+              pattern:{value:/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/ ,message:'Invalid email'},
               minLength: { value: 10, message: 'Minimum length is 5 characters' },
               maxLength: { value: 40, message: 'Maximum length is 20 characters' },
             })}
